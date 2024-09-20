@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Flow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .cashflow-container {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .cashflow-item {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .income {
+      color: green;
+    }
+
+    .expense {
+      color: red;
+    }
+
+    .net-cashflow {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cashflow-container">
+    <h1>Cash Flow Summary</h1>
+    <div class="cashflow-item income">Income: $<span id="income">0</span></div>
+    <div class="cashflow-item expense">Expenses: $<span id="expense">0</span></div>
+    <div class="cashflow-item net-cashflow">Net Cash Flow: $<span id="netCashFlow">0</span></div>
+  </div>
+
+  <script>
+    // Fetch cash flow data from the backend
+    fetch('http://localhost:3000/cashflow')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('income').textContent = data.income;
+        document.getElementById('expense').textContent = data.expense;
+        document.getElementById('netCashFlow').textContent = data.netCashFlow;
+      })
+      .catch(error => console.error('Error fetching cash flow:', error));
+  </script>
+
+</body>
+</html>
