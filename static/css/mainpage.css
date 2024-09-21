@@ -26,7 +26,7 @@
   .h1_vitazon
   {
     font-size: 72px;
-    font-family: ;
+    
   }
   .h3_slogen
   {
@@ -94,7 +94,7 @@
   /* Category Section */
   .categories {
     padding: 2rem;
-    background-image: url(assets/wallpaper.jpg);
+    background-image: url(wallpaper.jpg);
     text-align: center;
   }
   

@@ -16,7 +16,19 @@ def login():
         password = request.form.get('password')
         # For now, just redirecting to the main page after a login attempt
         return redirect(url_for('home'))
-    return render_template('loginpage.html')
+    return render_template('login.html')
 
+@app.route('/hotstuff', methods=['GET'])
+def hotstuff():
+    return render_template('hotstuff.html')
+ 
+@app.route('/custser', methods=['GET'])
+def custser():
+    return render_template('customerservice.html')       
+
+@app.route('/credit', methods=['GET'])
+def credit():
+    return render_template('creditscored.html')  
+    
 if __name__ == '__main__':
     app.run(debug=True)

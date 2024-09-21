@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-bg: #232F3E;
+    --secondary-bg: #f5f5f5;
+    --text-color: #333;
+    --white: #fff;
+    --border-color: #ccc;
+    --padding: 20px;
+    --margin: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-bg);
+    color: var(--white);
+    padding: var(--padding);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 var(--margin);
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+main {
+    padding: var(--padding);
+}
+
+h2 {
+    color: var(--primary-bg);
+}
+
+.faq, .contact {
+    background: var(--white);
+    padding: var(--padding);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--margin);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-bg);
+    outline: none;
+}
+
+button {
+    background: var(--primary-bg);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #37475A;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--primary-bg);
+    color: var(--white);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
