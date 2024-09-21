@@ -29,6 +29,10 @@ def custser():
 @app.route('/credit', methods=['GET'])
 def credit():
     return render_template('creditscored.html')  
+
+@app.route('/cart', methods=['GET'])
+def cart():
+    return render_template('cart.html')
     
 if __name__ == '__main__':
     app.run(debug=True)
